@@ -1,7 +1,7 @@
 /**
  * app.component
  */
-import { LitComponent } from '@litstack/core/dist';
+import { LitComponent } from '@litstack/core';
 import { HttpRequest, HttpResponse } from '@litstack/core/dist/http';
 import { GetMapping } from '@litstack/core/dist/http/mappings';
 
@@ -11,7 +11,7 @@ export class AppComponent {
     @GetMapping()
     home(req: HttpRequest, res: HttpResponse) {
         res.success({
-            message: 'Hello world!'
+            message: 'Welcome! Try /items and /items/123'
         });
     }
 }
