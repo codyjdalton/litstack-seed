@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@litstack/core": "0.0.9"
+    "@litstack/core": "0.1.0"
   },
   "devDependencies": {
     "@types/node": "^10.0.4",
