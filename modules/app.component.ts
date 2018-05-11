@@ -11,7 +11,7 @@ export class AppComponent {
     @GetMapping()
     home(req: HttpRequest, res: HttpResponse) {
         res.success({
-            message: 'Welcome! Try /items and /items/123'
+            message: 'Welcome! Try /items and /items/uuid-1'
         });
     }
 }
