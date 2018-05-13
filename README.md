@@ -15,3 +15,7 @@ A simple seed project using Litstack framework
 ```
 > npm start
 ```
+4. Run tests
+```
+> npm test
+```
