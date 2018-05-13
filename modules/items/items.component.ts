@@ -5,6 +5,7 @@ import { LitComponent } from '@litstack/core';
 import { HttpRequest, HttpResponse } from '@litstack/core/dist/http';
 import { GetMapping } from '@litstack/core/dist/http/mappings';
 
+import { AppConstants } from '../app.constants';
 import { Item } from './common/models/item.model';
 import { ItemsService } from './common/services/items.service';
 
@@ -15,7 +16,7 @@ export class ItemsComponent {
     }
     
     @GetMapping({
-        produces: 'application/vnd.items.v1+json'
+        produces: AppConstants.ITEMS_V1
     })
     getItems(req: any, res: HttpResponse) {
 
@@ -30,7 +31,12 @@ export class ItemsComponent {
             );
     }
 
-    private onItems(items: Item[], res: HttpResponse) {
+    /**
+     * @function onItems
+     * @param {Item[]} items 
+     * @param {HttpResponse} res 
+     */
+    private onItems(items: Item[], res: HttpResponse): void {
         // output items
         res.success(items);
     }
