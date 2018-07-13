@@ -1,6 +1,6 @@
 {
   "name": "litstack-seed",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@litstack/core": "0.x.x",
+    "@litstack/core": "^0.5.3",
     "rxjs": "^6.0.0-beta.4",
     "ts-node": "^6.0.2",
     "typescript": "^2.8.3"
