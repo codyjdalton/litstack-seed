@@ -30,6 +30,11 @@ export class ItemsService {
         }
     ];
 
+    /**
+     * @method fetchAll
+     * @param {string} path
+     * @returns {Observable<Item[]>}
+     */
     fetchAll(path: string): Observable<Item[]> {
         const res = of(null);
         return merge( // simulate HTTP request or storage call
@@ -39,7 +44,12 @@ export class ItemsService {
         );
     }
 
-    fetchById(id: string): Observable<any> {
+    /**
+     * @method fetchById
+     * @param {string} id
+     * @returns {Observable<Item>}
+     */
+    fetchById(id: string): Observable<Item> {
         const res = of(null);
         return merge( // simulate HTTP request or storage call
             res.pipe(mapTo(
@@ -48,6 +58,11 @@ export class ItemsService {
         );
     }
 
+    /**
+     * @method getItems
+     * @param {string} path
+     * @returns {Item[]}
+     */
     private getItems(path: string): Item[] {
         return this.items.map(
             (item: Item) => {
@@ -62,6 +77,11 @@ export class ItemsService {
         );
     }
 
+    /**
+     * @method getItemById
+     * @param {string} id
+     * @returns {Item}
+     */
     private getItemById(id: string): Item {
         return this.items.filter(
             (item: Item) => item.id === id
