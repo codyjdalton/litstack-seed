@@ -26,14 +26,7 @@ export class ItemComponent {
         // fetch an item
         this.itemsService.fetchById(req.params.id)
             .subscribe(
-                (item: Item) => {
-                    if(!item) {
-                        next();
-                        return;
-                    }
-
-                    res.success(item);
-                }
+                (item: Item) => this.onItem(item, res, next)
             );
     }
 
@@ -45,5 +38,19 @@ export class ItemComponent {
         res.errored(404, {
             message: 'Unable to find item with id: ' + req.params.id
         });
+    }
+
+    /**
+     * @method onItem
+     * @param {Item | null} item
+     * @param {HttpResponse} res
+     */
+    private onItem(item: Item, res: HttpResponse, next: HttpNext): void {
+        if(item) {
+            res.success(item);
+            return;
+        }
+
+        next();
     }
 }
