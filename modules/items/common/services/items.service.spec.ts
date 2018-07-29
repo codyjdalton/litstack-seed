@@ -26,12 +26,22 @@ describe('ItemComponent', () => {
             );
     });
 
-    it('should fetch an item by id', (done) => {
-
+    it('should return null if no item is present', (done) => {
         service.fetchById('none-1')
             .subscribe(
                 (item: Item)=> {
                     expect(item).to.be.null;
+                    done();
+                }
+            );
+    });
+
+    it('should fetch a list of items', (done) => {
+
+        service.fetchAll('some-path')
+            .subscribe(
+                (item: Item[])=> {
+                    expect(item.length).to.be.above(0);
                     done();
                 }
             );
