@@ -40,8 +40,12 @@ describe('ItemComponent', () => {
 
     it('should return 404 if the item is not found', (done) => {
 
+        const notFoundHeader: string = AppConstants.MESSAGE_V1 + 
+                                       SpecConstants.DEFAULT_CONTENT;
+
         component.get('/uuid-5')
                  .expect(404)
+                 .expect('Content-Type', notFoundHeader)
                  .expect((res) => {
                      expect(res.body.message).to.not.be.undefined;
                  })
