@@ -13,6 +13,7 @@
   "dependencies": {
     "@litstack/core": "^0.6.0",
     "rxjs": "^6.2.2",
+    "super-injector": "^1.0.2",
     "ts-node": "^6.2.0",
     "typescript": "^2.9.2"
   },
