@@ -13,7 +13,7 @@ export class AppComponent {
     @GetMapping({
         produces: AppConstants.MESSAGE_V1
     })
-    home(req: HttpRequest, res: HttpResponse) {
+    home(res: HttpResponse) {
         res.success({
             message: AppConstants.WELCOME_MESSAGE
         });
