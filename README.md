@@ -4,7 +4,7 @@
 
 ## About
 
-A simple seed project using [Litstack framework](https://github.com/codyjdalton/litstack). Use it for reference or clone and change as it necessary.
+A simple seed project using [Litstack framework](https://github.com/codyjdalton/litstack). Use it for reference or clone and change it as necessary.
 
 [View the demo](https://litstack-seed.herokuapp.com/)
 
