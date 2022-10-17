@@ -2,8 +2,8 @@
  * item.component
  */
 import { LitComponent } from '@litstack/core';
-import { HttpRequest, HttpResponse, HttpNext } from '@litstack/core/dist/http';
-import { GetMapping } from '@litstack/core/dist/http/mappings';
+import { HttpRequest, HttpResponse, HttpNext } from '@litstack/core';
+import { GetMapping } from '@litstack/core';
 
 import { AppConstants } from '../../../app.constants';
 import { Item } from '../../common/models/item.model';
